@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>管理员：C:\Windows\system32\cmd.exe</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="//cdnjscn.b0.upaiyun.com/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/qx_chat.css">
+
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        body{
+            overflow:hidden;
+        }
+        .body{
+            width:677px;
+            height:466px;
+            position: absolute;
+            font-family:"新宋体",Terminal,Arial;
+            color:white;
+            background:black;
+            overflow-x:hidden;
+            overflow-y:scroll;
+        }
+        .body-inner{
+            height:5000px;
+        }
+        #tmpMsg{
+            opacity:0;
+            cursor:none;
+        }
+        span{
+            /*display: inline-block;*/
+            word-wrap: break-word;
+        }
+        b{
+            font-size:24px;
+        }
+    </style>
+
+
+</head>
+<body>
+
+
+
+
+<div id="modalWin" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <input autofocus id="nickname-input" class="form-control" placeholder="请输入你的昵称">
+        </div>
+    </div>
+</div>
+
+
+<div class="body">
+    <div class="body-inner">
+        <div>
+            Microsoft Windows [版本 6.1.76.1]
+        </div>
+        <div style="margin-bottom:20px;">
+            版权所有(c) 2009 Microsoft Corporation。保留所有权利。
+        </div>
+
+
+        <div id="container">
+
+        <span id="message">
+
+            <span>
+
+            </span>
+        </span>
+            <span id="underscore">▃</span>
+        </div>
+    </div>
+
+</div>
+<div style="background:black;width:677px;opacity:0;">
+    <input id="tmpMsg">
+</div>
+
+
+
+
+<script src="//cdnjscn.b0.upaiyun.com/libs/jquery/1.11.1/jquery.min.js"></script>
+<!--<script src="//cdnjscn.b0.upaiyun.com/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>-->
+<script src="//cdnjscn.b0.upaiyun.com/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="/js/socket.io.js"></script>
+<!--<script src="/js/desktopnotify.js"></script>-->
+<!--<script src="/js/common.js"></script>-->
+<!--<script src="/js/qx_chat_socket.js"></script>-->
+
+<script>
+    var arr=[
+        '/js/qx_chat_socket.js'];
+    for(var i in arr){
+        document.write('<script src="'+arr[i]+'?r='+Math.random()+'"><\/script>');
+    }
+</script>
+
+</body>
+</html>
